@@ -12,7 +12,7 @@ import img8 from "../../Assests/img8.jpg"
 import img9 from "../../Assests/img9.jpg"
 
 import Aos from 'aos'
-import 'bower_components/aos/dist/aos.css'
+import 'aos/dist/aos.css'
 
 
 
