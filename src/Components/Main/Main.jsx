@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './main.css'
 import { HiOutlineLocationMarker, HiOutlineClipboardCheck } from 'react-icons/hi'
 import img1 from "../../Assests/img1.jpg"
@@ -10,6 +10,9 @@ import img6 from "../../Assests/img6.jpg"
 import img7 from "../../Assests/img7.jpg"
 import img8 from "../../Assests/img8.jpg"
 import img9 from "../../Assests/img9.jpg"
+
+import Aos from 'aos'
+import 'bower_components/aos/dist/aos.css'
 
 
 
@@ -98,10 +101,15 @@ const Data = [
 
 ]
 const Main = () => {
+
+  useEffect(() => {
+    Aos.init({duration: 2000})
+   }, [])
+
   return (
     <section className='main container section'>
       <div className="secTitle">
-        <h3 className="title">
+        <h3 data-aos="fade-right" className="title">
           Most visited destinations
         </h3>
       </div>
@@ -112,7 +120,7 @@ const Main = () => {
             // id, imgSrc, destTitle, location, grade, fees, description
             ) => {
             return (
-              <div key={i.id} className="singleDestination">
+              <div data-aos="fade-up" key={i.id} className="singleDestination">
                 <div className="imageDiv">
                   <img src={i.imgSrc} alt={i.destTitle} />
                 </div>
