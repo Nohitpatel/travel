@@ -130,4 +130,10 @@
 .main .secContent .singleDestination .cardInfo .btn .icon {
   align-self: center;
   font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
